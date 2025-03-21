@@ -1,0 +1,16 @@
+clusterGroup:
+  namespaces:
+    - rag-llm:
+        operatorGroup: true
+        targetNamespaces: 
+          - rag-llm
+        labels:
+          opendatahub.io/dashboard: "true"
+          modelmesh-enabled: 'false'
+  subscriptions:
+    elastic:
+      name: elasticsearch-eck-operator-certified
+      namespace: rag-llm
+      channel: stable
+      source: certified-operators
+      sourceNamespace: openshift-marketplace

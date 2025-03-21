@@ -1,0 +1,7 @@
+clusterGroup:
+  subscriptions:
+    edb:
+      name: cloud-native-postgresql
+      namespace: openshift-operators
+      channel: stable-v1.23
+      source: certified-operators
